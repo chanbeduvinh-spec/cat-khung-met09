@@ -41,12 +41,37 @@ input[type=file]::file-selector-button{font:500 14px Roboto,system-ui,sans-serif
 #wp{position:fixed;inset:0;z-index:-1;background-size:cover;background-position:center;background-color:var(--bg)}
 .card,.item{backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2)}
 h1,h2,.hint,#st{display:table;padding:4px 12px;border-radius:8px;background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+details.card{margin:10px 0}summary{cursor:pointer;font-weight:500;min-height:28px}details ol,details ul{margin:8px 0;padding-left:22px}details li{margin:4px 0;font-size:15px}details h3{font-size:15px;font-weight:700;margin:14px 0 4px}
 </style>
 </head>
 <body>
 <div id="wp"></div>
 <main>
   <h1>Cắt khung từ trang</h1>
+  <details class="card">
+    <summary>Hướng dẫn sử dụng</summary>
+    <h3>Cách dùng cơ bản</h3>
+    <ol>
+      <li>Bấm "Chọn tệp" ở trên cùng, chọn một hoặc nhiều ảnh trang truyện. Chọn nhiều ảnh thì đổi trang bằng ô "Trang 1, Trang 2...".</li>
+      <li>Kéo ngón tay trên trang để vẽ khung. Kéo 4 góc để chỉnh kích thước, kéo vào giữa khung để dời.</li>
+      <li>Bấm <b>Thêm khung đã chọn</b>. Khung hiện ở mục "Các khung đã cắt" bên dưới, rồi chọn tiếp khung khác.</li>
+      <li>Bấm <b>Tải về</b> ở từng khung. Từ 2 khung trở lên có thêm <b>Tải tất cả</b> (file zip).</li>
+    </ol>
+    <h3>Các chức năng thêm</h3>
+    <ul>
+      <li><b>Cắt xéo:</b> bật nút này rồi kéo từng góc riêng để tạo cạnh nghiêng. Phần ngoài cạnh xéo bị bỏ.</li>
+      <li><b>Xóa nền:</b> bật Xóa nền, bấm Chấm màu nền rồi chạm vào màu nền trên trang (mặc định là trắng). Chỉnh Độ nhạy nếu còn sót nền hoặc mất nét. Phần trắng bên trong bong bóng thoại vẫn được giữ. Kết quả lưu PNG nền trong suốt.</li>
+      <li><b>Thu phóng và Cuộn trang:</b> kéo thanh Thu phóng để phóng to trang. Bật Cuộn trang thì chạm kéo sẽ cuộn, tắt đi để vẽ khung tiếp.</li>
+      <li><b>Sửa, Xóa, Hoàn tác, Bỏ chọn:</b> Sửa đưa khung đã thêm về trang để chỉnh lại, Hoàn tác bỏ khung vừa thêm, Bỏ chọn hủy khung đang vẽ.</li>
+      <li><b>Định dạng ảnh:</b> chọn PNG (nền trong suốt), JPG (nền trắng) hoặc WebP trước khi bấm Thêm khung.</li>
+      <li><b>Hình nền trang:</b> đổi hình nền có sẵn hoặc chọn ảnh riêng ở hai ô phía trên.</li>
+    </ul>
+    <h3>Lưu ý</h3>
+    <ul>
+      <li>Ảnh chỉ xử lý trên máy của bạn, không gửi đi đâu.</li>
+      <li>Nên chọn PNG khi cắt xéo hoặc xóa nền để phần trong suốt không bị thành nền trắng.</li>
+    </ul>
+  </details>
   <div class="card">
     <div class="row">
       <input type="file" id="file" accept="image/*" multiple aria-label="Thêm ảnh trang">
